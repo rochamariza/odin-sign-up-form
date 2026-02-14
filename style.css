@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +10,8 @@ body{
     font-family: "Orbitron", sans-serif;
     background-color: #092780;
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
@@ -21,9 +23,7 @@ body{
     justify-content: center;
 }
 .image{
-    height: 100vh;
-    flex-basis: 400px;
-    flex: 1;
+    height: 100%;
 }
 .image img{
     object-fit: cover;
@@ -33,9 +33,9 @@ body{
 .itens{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
-    flex: 2;
-    width: 100vh;
+    width: 100%;
 }
 .form{
     display: flex;
@@ -48,18 +48,18 @@ body{
 }
 .boxes form{
     display: grid;
-    width: 100%;
     background-color: white;
     grid-template-columns: repeat(2, 300px);
+    max-width: 300px;
     gap: 30px;
 }
 .boxes {
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 40px;
-    padding-inline: 50px;
+    padding: 50px;
     gap: 20px;
+    width: 100%;
 }
 .field{
     display: flex;
@@ -70,6 +70,11 @@ body{
     border-radius: 4px;
     border: 1px solid;
     border-color: #cbcbcb;
+    outline: none;
+}
+.field input:focus{
+    border: 1px solid;
+    border-color: #09184b;
 }
 .itens button{
     margin-inline: 50px;
@@ -95,4 +100,59 @@ body{
 }
 .itens a{
     color: #ff6434;
+}
+@media (max-width: 1024px) {
+    body{
+        overflow-y: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+        height: 80%;
+        flex: 0 0 35%;
+    }
+    .image img{
+        object-fit: cover;
+        width: 100%;
+    }
+    .quote{
+        text-align: center;
+        font-size: 12px;
+    }
+    .boxes{
+        justify-content: center;
+        align-items: center;
+        min-width: auto;
+        width: 100%;
+    }
+    .boxes h1{
+        font-size: 28px;
+    }
+    form{
+        justify-content: center;
+        align-items: center;
+    }
+    .submit{
+        align-self: center;
+    }
+    .itens p{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .quote{
+        font-size: 10px;
+    }
+    .boxes h1{
+        font-size: 22px;
+    }
+    .boxes form{
+        grid-template-columns: repeat(1, 300px);
+    }
+    .itens p{
+        text-align: center;
+    }
 }

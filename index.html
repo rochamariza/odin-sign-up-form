@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="IMGS/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <title>Sign Up Form</title>
 </head>
@@ -17,13 +18,13 @@
                 </div>
                 <div class="boxes">
                     <h1>Let's do this!</h1>
-                    <form action="#">
+                    <form action="#" id="form">
                         <div class="field">
-                            <label for="name">First Name</label>
+                            <label for="nome">First Name</label>
                             <input type="text" name="name" id="nome">
                         </div>
                         <div class="field">
-                            <label for="lastname">Last Name</label>
+                            <label for="last-name">Last Name</label>
                             <input type="text" name="lastname" id="last-name">
                         </div>
                         <div class="field">
@@ -36,16 +37,16 @@
                         </div>
                         <div class="field">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" required>
                         </div>
                         <div class="field">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" name="confirm-password" id="confirm-password">
+                            <input type="password" name="confirm-password" id="confirm-password" required>
                         </div>
                     </form>
                 </div>
             </div>
-            <button type="submit">Create Account</button>
+            <button type="submit" class="submit" form="form">Create Account</button>
             <p>Already have and account? <a href="#">Log In</a></p>
         </div>
     </div>
