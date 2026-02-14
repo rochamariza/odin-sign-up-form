@@ -1,8 +1,6 @@
 const passwd = document.getElementById("password")
 const confirmPasswd = document.getElementById("confirm-password")
 const form = document.getElementById("form")
-const nome = document.getElementById("nome")
-const button = document.querySelector(".submit")
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault()
